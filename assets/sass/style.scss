@@ -1,0 +1,73 @@
+/*!
+Theme Name: Engin3
+Theme URI: https://github.com/engag3/engin3
+Author: ENGAG3 Media
+Author URI: https://engag3.media/
+Template: storefront
+Description: Custom theme designed for engga3.media
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:baileigh
+Tags:
+GitHub Theme URI: https://github.com/engag3/engin3
+GitHub Branch: master
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+// Include Libraries
+
+// Bourbon
+// See: http://bourbon.io/docs/
+@import 'bourbon';
+
+// Susy
+// Susy grid system. See: http://susydocs.oddbird.net/en/latest/
+@import 'susy';
+
+
+@import "vendors/include-media";
+
+@import "utils/fonts";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/layouts";
+
+
+// @import "divi";
+//
+// // @import "sidebar";
+// @import "woocommerce";
+
+
+@import "base/base";
+@import "base/typography";
+@import "base/header";
+@import "base/footer";
+@import "base/storefront";
+
+
+@import "modules/fields";
+@import "modules/gforms";
+@import "modules/buttons";
+@import "modules/sticky";
+//
+@import "modules/features";
+@import "modules/packages";
+@import "modules/dashboard";
+@import "modules/login";
+// @import "modules/clientele";
+// @import "modules/showcase";
+@import "modules/headers";
+@import "modules/showcase";
+@import "modules/product";
+@import "modules/hex";
+@import "modules/portfolio";
+//
+//
+
+@import "vendors/beaver-builder";
+@import "vendors/woocommerce";

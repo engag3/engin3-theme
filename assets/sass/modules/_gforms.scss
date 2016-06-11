@@ -1,0 +1,307 @@
+
+
+
+/**
+ * Gravity Forms
+ */
+
+.gform_wrapper {
+  position: relative;
+
+  padding-bottom: gutters();
+
+  .gform_anchor {
+    height: 0;
+    padding: 0;
+    position: absolute;
+    top: -70px;
+  }
+
+  ul {
+    @include clean-list;
+    margin-bottom: 0;
+  }
+
+
+  .gform_fields {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto !important;
+  }
+
+  .gfield {
+    flex-basis: 100%;
+    margin-bottom: gutters();
+    margin-bottom: .5rem;
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+    }
+  }
+
+  .no--label {
+    > label { display: none !important; }
+  }
+
+  .gfield_checkbox {
+    li {
+      display: inline-block;
+      margin: .25rem;
+    }
+  }
+
+  .gfield_label {
+    margin-top: .5rem;
+    padding: .25rem 0;
+    font-size: 1rem;
+    color: $clr__txt--input;
+
+    &::after {
+      content: '//';
+      padding-left: .5rem;
+      opacity: .5;
+    }
+  }
+
+  .gfield_description {
+    padding: 1rem 0;
+  }
+
+  .gsection {
+    flex-basis: 100%;
+  }
+
+  .name_first input + label {
+    display: none;
+  }
+
+  .section--card {
+    background: $clr__bg--input;
+    border-radius: 3px;
+    box-shadow: 2px 2px 8px 1px rgba(#000, 0.1);
+
+    padding: 1rem;
+    margin: 2rem 1.5rem 2rem 0;
+
+    .gfield_label {
+      margin-top: 0;
+      margin-bottom: .25rem;
+    }
+  }
+
+  @include media(">=tablet") {
+    .gfield {
+      padding-right: 1%;
+    }
+
+    .gfield_label {
+      white-space: nowrap;
+    }
+
+    .input__small {
+      flex-basis: 25%;
+    }
+
+    .input__medium {
+      flex-basis: 50%;
+    }
+
+    .input__large {
+      flex-basis: 100%;
+    }
+
+    .gfield.last {
+      padding-right: 0;
+      padding-left: 1%;
+    }
+  }
+
+  .left_label {
+    label, .ginput_container {
+      display: inline-block;
+    }
+  }
+
+ .validation_error {
+   background: $clr__hlt--soft;
+   color: #fff;
+   padding: 1rem;
+   font-size: 1em;
+   text-align: center;
+
+   &:before {
+     content: '\f05a ';
+     font-size: 1.2em;
+     font-family: fontawesome;
+     padding-right: .5rem;
+     font-weight: 900;
+     vertical-align: middle;
+   }
+
+   &:after {
+     content: ' // ';
+     padding-left: .5rem;
+     font-weight: 900;
+     vertical-align: middle;
+   }
+ }
+
+  .validation_message {
+    background: $clr__hlt--soft;
+    opacity: .8;
+    color: #000;
+    padding: .25rem;
+    font-size: .8em;
+
+    &:before {
+      content: ' // ';
+      padding-left: .5rem;
+      font-weight: 900;
+      vertical-align: middle;
+    }
+  }
+}
+
+.gform_confirmation_wrapper {
+  padding: 5%;
+  height: 85vh;
+  padding: 1rem;
+  background: $clr__bg--input;
+  margin-bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gform_confirmation_message {
+  font-size: 1.1em;
+}
+
+.submit--full input[type="submit"] {
+  width: 100%;
+}
+
+.signup__form {
+
+  > div {
+    padding-bottom: 0;
+  }
+
+  form {
+    display: flex;
+    justify-content: flex-end;;
+    align-items: center;
+  }
+}
+
+
+.gform_wrapper .gform_fileupload_multifile .gform_drop_area {
+    padding: 25px;
+    border: 2px dashed $clr__bg--input;
+    text-align: center;
+    color: #AAA;
+    margin-bottom: 10px;
+}
+
+
+.gform_validation_container,
+.gform_wrapper .gform_validation_container,
+body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container,
+body .gform_wrapper li.gform_validation_container,
+body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
+    display: none!important;
+    position: absolute!important;
+    left: -9000px;
+}
+
+
+
+
+.features__grid {
+
+  .gfield_checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    li {
+      flex-basis: 47%;
+    }
+
+
+    input {
+      display: none;
+    }
+
+    label {
+      height: 100%;
+      display: block;
+      padding: 2rem .5rem;
+      text-align: center;
+      font-size: .7em;
+      cursor: pointer;
+
+      background: $clr__bg--input;
+      color: $clr__txt--input;
+      transition: all .2s;
+
+      border: solid 1px;
+      border-radius: 10px;
+      border-color: #292929 #282828 #151515 #171717;
+
+      span {
+        display: none !important;
+        font-size: 0 !important;
+      }
+    }
+
+    label:hover {
+      color: $clr__hlt--strong;
+    }
+
+    input:checked + label {
+      @extend .grd--hlt;
+      color: #000;
+      border: $clr__hlt__strong;
+      box-shadow: 0 0 10px 3px rgba($clr__hlt__soft, 0.25);
+    }
+
+    i {
+      display: block;
+      margin: 0 0 1rem 0;
+      font-size: 30px;
+      vertical-align: middle;
+    }
+
+  @include media(">=tablet") {
+    justify-content: space-between;
+
+    i {
+      margin: 0 1rem 0 0;
+      font-size: 40px;
+      display: inline-block;
+    }
+
+    li {
+      flex-basis: 32%;
+    }
+  }
+
+  @include media(">=laptop") {
+      li {
+        flex-basis: 24%;
+      }
+    }
+  }
+}
+
+
+.ginput_price {
+  display: none !important;
+  font-size: 0 !important;
+  visibility: hidden;
+}

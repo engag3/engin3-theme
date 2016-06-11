@@ -1,0 +1,127 @@
+
+.login_page {
+  padding: 15% 0;
+  background:  url('http://www.engag3.media/wp-content/uploads/2016/05/cityscape.jpg') center no-repeat;
+  background-size: cover;
+}
+
+
+
+.login_form {
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+}
+
+.form_body {
+
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.75);
+    border: solid 1px #111;
+
+    @extend .grd--strong;
+
+    @include clearfix;
+
+  .form_logo {
+    max-width: 4.5rem;
+    position: absolute;
+    right: 0;
+    padding: .75rem 1rem;
+    opacity: .75;
+  }
+
+  h2 {
+    background: #111;
+    padding: .5em;
+  }
+
+
+
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    background: #0d0d0d !important;
+    border-top: solid 1px #171717;
+    border-right: solid 1px #161616;
+    border-bottom: solid 1px #1f1f1f;
+    border-left: solid 1px #1f1f1f;
+    border-radius: 5px !important;
+  }
+
+  form {
+    margin: 2em 0;
+    padding: 1rem;
+  }
+}
+
+.form_switcher {
+  text-align: center;
+  padding: 1rem;
+  color: $clr__txt__soft;
+}
+
+.woocommerce-LostPassword {
+  text-align: center;
+  @include align-content--bottom;
+  bottom: -5.5rem;
+  font-size: .7em;
+  white-space: nowrap;
+}
+
+.col2-set#customer_login {
+
+  .col-1, .col-2 {
+    width: 100%;
+    float: none;
+  }
+
+  .col-1 {
+    display: block;
+  }
+  .col-2 {
+    display: none;
+  }
+}
+
+
+.col2-set#customer_login.is--register {
+
+  .col-1 {
+    display: none;
+  }
+  .col-2 {
+    display: block;
+  }
+}
+
+.login_form_select {
+  display: none;
+  font-size: .8em;
+}
+.login_form_select.is--active { display: inline; }
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register { border: 0; }
+
+.woocommerce form .form-row-first,
+.woocommerce form .form-row-last,
+.woocommerce-page form .form-row-first,
+.woocommerce-page form .form-row-last {
+  width: 100%;
+  float: none;
+}
+
+.woocommerce-lost-password {
+  .form_switcher {
+    display: none;
+  }
+}
+
+.return-to-login {
+  text-align: center;
+  @include align-content--bottom;
+  bottom: -2rem;
+  font-size: .8em;
+  white-space: nowrap;
+}

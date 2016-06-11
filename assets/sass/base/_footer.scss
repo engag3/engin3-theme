@@ -1,0 +1,126 @@
+.site-footer {
+  // border-top: solid 5px $clr__hlt--main;
+  padding: 0;
+
+  font-family: $e3-regular-font;
+
+  .col-full {
+    max-width: none;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .footer_topbar {
+    margin-top: -50px;
+
+    .fl-module-rich-text {
+      background: $clr__bg__strong;
+
+      .fl-module-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .footer_columns {
+
+    h4 {
+      border-bottom: solid 1px $clr__bg__strong;
+      white-space: nowrap;
+      padding-bottom: .5em !important;
+
+      &::before {
+        letter-spacing: 0px;
+        content: '// ';
+      }
+    }
+
+    li a {
+      position: relative;
+      display: inline-block;
+      font-size: 1.2em;
+      padding: .5rem 0;
+      margin-left: 1.5rem;
+
+      &::before,
+      &::after {
+        position: absolute;
+        transition: all .3s;
+        opacity: 0;
+        color: $clr__hlt__strong;
+      }
+
+      &::before {
+        content: '[';
+        left: -2em;
+      }
+
+      &::after {
+        content: ']';
+        right: -2em;
+      }
+    }
+
+    li a:hover {
+      color: $clr__hlt__strong;
+
+      &::before { left: -1em;  }
+      &::after  { right: -1em; }
+
+      &::before,
+      &::after { opacity: 1; }
+    }
+
+    .fl-menu {
+      position: relative;
+    }
+
+    .fl-menu-mobile-toggle {
+      position: absolute;
+      top: -2.5rem;
+      right: 0;
+    }
+
+    .menu {
+      position: relative !important;
+    }
+  }
+}
+
+.footer_logo .fl-photo-content {
+  background: #111;
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  float: none;
+
+  // transform: rotate(45deg);
+  // transform
+  // margin-top: 2rem;
+
+  a {
+    display: inline-block;
+    opacity: .7;
+    max-width: 85px;
+    // transform: rotate(-45deg);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  img {
+  }
+}
+
+.footer_credits {
+  text-align: center;
+}
+
+
+.widget_nav_menu ul li:before {
+  display: none;
+}

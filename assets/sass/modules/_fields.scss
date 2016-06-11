@@ -1,0 +1,64 @@
+#page {
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  input[type="search"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="range"],
+  input[type="date"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="color"],
+  select,
+  textarea {
+    font-family: $e3-regular-font;
+    font-weight: 500;
+    padding: 12px 13px;
+    text-decoration: none;
+    text-shadow: none;
+    font-size: 1rem;
+    letter-spacing: 2px;
+
+    background: $clr__bg--input;
+    color: $clr__txt--input;
+
+    border: solid 0;
+    // border-radius: 2px;
+    // border-color: #292929 #282828 #191919 #191919;
+
+    -webkit-appearance: none;
+    transition: all .2s;
+    max-width: 100%;
+
+
+    &:active,
+    &:focus {
+      background: $clr__bg--input-active;
+      color: $clr__txt--input-active;
+    }
+
+    &:active {
+      transform: translate(0,1px);
+    }
+
+    @include media(">desktop") {
+      padding: 15px 16px;
+    }
+  }
+
+  ::-webkit-input-placeholder { color: $clr__txt--input;}
+  :-moz-placeholder { color: $clr__txt--input; opacity: 1;}
+  ::-moz-placeholder {  color: $clr__txt--input; opacity: 1;}
+  :-ms-input-placeholder { color: $clr__txt--input;}
+  :placeholder-shown { color: $clr__txt--input;}
+
+  textarea {
+  	width: 100%;
+  }
+
+}

@@ -1,0 +1,349 @@
+.showcase__screens {
+  background: #222;
+  background: radial-gradient(circle at bottom 30% center, #282B2D, #111);
+  margin-bottom: -25px;
+
+  h4 {
+    margin-bottom: 1em;
+  }
+
+  .slides {
+    @include clean-list;
+  }
+}
+
+.showcase--no-links {
+  .showcase__screan__image a {
+    width: 0;
+    height: 0;
+  }
+}
+
+.showcase__screens__wrap {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 1.5rem;
+}
+
+.showcase__screens__item {
+  position: relative;
+  width: 100%;
+}
+
+.showcase__title, .showcase__subtitle {
+  text-align: center;
+  width: 90%;
+  padding-top: 0;
+  margin: 0 auto;
+}
+
+.showcase__title {
+  padding-bottom: .25rem;
+  margin-bottom: .5rem;
+  border-bottom: solid 1px rgba(#ffffff, 0.2);
+  max-width: 650px;
+}
+
+@include media("<tablet") {
+
+  .showcase__title__wrap {
+    padding-top: 2%;
+  }
+
+  .showcase__title{
+    font-size: 1.1em;
+  }
+
+  .showcase__subtitle {
+    font-size: .8em;
+  }
+}
+
+.showcase__subtitle {
+  font-weight: 100;
+  font-style: italic;
+}
+
+.showcase__subtitle {
+  max-width: 800px;
+}
+
+.showcase__screan {
+  position: relative;
+  background: center bottom no-repeat;
+  background-size: contain;
+}
+
+.showcase__screan--desktop {
+  background-image: url('./assets/images/screens/imac.png');
+  z-index: 1;
+
+  .showcase__screan__image {
+    @include align-content--top;
+    top: 3%;
+    width: 93.5%;
+    height: 59%;
+  }
+}
+
+.showcase__screan--laptop {
+  background-image: url('./assets/images/screens/macbook.png');
+  z-index: 2;
+
+  .showcase__screan__image {
+    @include align-content--top;
+    width: 74%;
+    height: 78.5%;
+    top: 3.5%;
+    margin-left: .9%;
+  }
+}
+
+.showcase__screan--tablet {
+  background-image: url('./assets/images/screens/ipad.png');
+  z-index: 3;
+
+  .showcase__screan__image {
+    @include align-content--top;
+    width: 80%;
+    height: 79%;
+    top: 4%;
+    margin-left: .6%;
+  }
+}
+
+.showcase__screan--phone {
+  background-image: url('./assets/images/screens/iphone.png');
+  z-index: 4;
+
+  .showcase__screan__image {
+    @include align-content--top;
+    width: 66%;
+    height: 72%;
+    left: 48.82%;
+  }
+}
+
+.showcase__screan__image {
+  position: absolute;
+  background: center no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  opacity: .8;
+
+  a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+  }
+
+  &:hover {
+    opacity: .85;
+  }
+}
+
+.showcase__screens__item {
+  height: 300px;
+}
+
+.showcase__screan--desktop {
+  @include align-content--bottom;
+  width: 300px;
+  height: 260px;
+}
+
+@include media("<600px") {
+  .showcase__screan--tablet {
+    @include align-content--bottom-left;
+    width: 120px;
+    height: 150px;
+    margin-left: -5%;
+  }
+
+  .showcase__screan--phone {
+    @include align-content--bottom-left;
+    margin-bottom: -4%;
+    margin-left: 15%;
+    width: 60px;
+    height: 100px;
+  }
+}
+
+@include media(">=600px") {
+
+  .showcase__screan--tablet {
+    @include align-content--bottom-right;
+    width: 120px;
+    height: 150px;
+    margin-right: 10%;
+  }
+
+  .showcase__screan--phone {
+    @include align-content--bottom-right;
+    margin-bottom: -4%;
+    margin-right: 20%;
+    width: 60px;
+    height: 100px;
+  }
+}
+
+@include media(">=600px", "<=768px") {
+
+  .showcase__screan--laptop {
+    @include align-content--bottom-left;
+    width: 250px;
+    height: 150px;
+    left: 0;
+  }
+
+  .showcase__screan--tablet {
+    @include align-content--bottom-right;
+    width: 120px;
+    height: 150px;
+    margin-right: 10%;
+  }
+
+  .showcase__screan--phone {
+    @include align-content--bottom-right;
+    margin-bottom: -2%;
+    margin-right: 20%;
+    width: 60px;
+    height: 100px;
+  }
+}
+
+//
+// @include media("<=phone") {
+//
+//   .showcase__screan--tablet {
+//     margin-left: -1%;
+//   }
+//
+//   .showcase__screan--phone {
+//     margin-bottom: -3.5%;
+//     margin-left: 18%;
+//   }
+// }
+
+
+@include media(">768px") {
+  .showcase__screens__item {
+    height: 450px;
+  }
+
+  .showcase__screan--desktop {
+    @include align-content--bottom;
+    width: 450px;
+    height: 400px;
+  }
+
+  .showcase__screan--laptop {
+    @include align-content--bottom-left;
+    width: 350px;
+    height: 200px;
+    left: 0;
+  }
+
+  .showcase__screan--tablet {
+    @include align-content--bottom-right;
+    width: 145px;
+    height: 190px;
+    margin-right: 12%;
+  }
+
+  .showcase__screan--phone {
+    @include align-content--bottom-right;
+    margin-bottom: -1.5%;
+    margin-right: 8%;
+    width: 66px;
+    height: 110px;
+  }
+
+  .showcase__screens__wrap.left {
+    .showcase__screan--tablet {
+      @include align-content--bottom-left;
+      margin-left: 7%;
+    }
+
+    .showcase__screan--phone {
+      @include align-content--bottom-left;
+      margin-bottom: -1.5%;
+      margin-left: 5%;
+    }
+  }
+}
+
+@include media(">1100px") {
+
+  .showcase__screens__item {
+    height: 600px;
+  }
+
+  .showcase__screan--desktop {
+    width: 560px;
+    height: 500px;
+  }
+
+  .showcase__screan--laptop {
+    width: 430px;
+    height: 250px;
+  }
+
+  .showcase__screan--tablet {
+    width: 200px;
+    height: 260px;
+  }
+
+  .showcase__screan--phone {
+    margin-right: 7%;
+    width: 84px;
+    height: 150px;
+  }
+}
+
+@include media(">1600px") {
+
+  .showcase__screens__wrap {
+    max-width: 1400px;
+  }
+
+  .showcase__screens__item {
+    height: 700px;
+  }
+
+  .showcase__screan--desktop {
+    width: 650px;
+    height: 580px;
+  }
+
+  .showcase__screan--laptop {
+    width: 490px;
+    height: 290px;
+  }
+
+  .showcase__screan--tablet {
+    width: 230px;
+    height: 290px;
+  }
+
+  .showcase__screan--phone {
+    margin-right: 7%;
+    width: 100px;
+    height: 180px;
+  }
+
+  .showcase__screens__wrap.left {
+    .showcase__screan--tablet {
+      margin-left: -8%;
+    }
+
+    .showcase__screan--phone {
+      margin-left: 14%;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.portfolio_bricks {
+  // column-count: 3;
+  // column-gap: 2.5em;
+
+  .brick {
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+    margin: 2% 1%;
+    box-shadow: 0 1px 6px 1px rgba(#000000, 0.4);
+    width: 48%;
+    vertical-align: top;
+    transition: all .3s;
+  }
+
+  .brick:hover {
+    opacity: 1;
+    // filter: grayscale(0);
+  }
+
+  .brick::after {
+    content: "";
+    position: absolute;
+    top: -3%;
+    left: 3%;
+    width: 91%;
+    height: 100%;
+    border: solid 1px #fff;
+    opacity: .2;
+    transition: all .5s;
+  }
+
+  .brick:hover::after {
+    top: -5%;
+    opacity: .8;
+  }
+
+
+  @include media(">=tablet") {
+    .brick {
+      width: 30%;
+      margin: 1.5%;
+      opacity: .5;
+    }
+  }
+}

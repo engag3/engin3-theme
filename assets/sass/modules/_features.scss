@@ -1,0 +1,16 @@
+.features_section .feature .fl-col-content {
+  background: $clr__bg--input;
+  // color: $clr__txt--input;
+
+  // border: solid 1px;
+  border-radius: 3px;
+  // border-color: #333 #2d2d2d #222 #222;
+  box-shadow: 0 0 7px rgba(#000000, 0.4);
+  border-radius: 6px;
+
+  img {
+    max-width: 90px;
+    width: 40%;
+  }
+
+}

@@ -1,0 +1,66 @@
+button,
+.button,
+.btn,
+.fl-builder-content a.fl-button,
+.fl-builder-content a.fl-button:visited,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+
+	font-family: $e3-regular-font;
+	font-weight: 300;
+
+
+	text-shadow: none;
+	text-transform: uppercase;
+
+  max-width: 100%;
+  -webkit-appearance: none;
+
+  background: $clr__bg--input;
+  color: $clr__txt--input;
+
+
+	border: 0 solid transparent;
+	color: inherit;
+	cursor: pointer;
+	line-height: normal;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 18px;
+	font-size: 1rem;
+	transition: all .1s linear;
+	padding: .875rem 1.25rem;
+	box-shadow: none;
+
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: $clr__bg--input-active;
+    color: $clr__txt--input-active;
+  }
+
+}
+
+.ghost-button {
+	background-color: transparent;
+	opacity: .8;
+
+	&:hover, &:active, &:focus {
+		opacity: 1;
+		background-color: transparent;
+	}
+
+	i {
+		color: inherit;
+	}
+}
+
+
+input + label {
+	font-family: $e3-regular-font;
+}
